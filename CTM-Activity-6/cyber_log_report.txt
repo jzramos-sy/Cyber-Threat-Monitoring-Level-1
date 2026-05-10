@@ -1,0 +1,51 @@
+
+===== CYBER THREAT LOG REPORT =====
+Name: Joshua Ramos
+Handle: MaskedLogic
+Start Time: 2026-05-10 22:01:45.680922
+End Time: 2026-05-10 22:02:49.280544
+Duration (minutes): 1.06
+Score: 10/10
+Rating: EXPERT
+---- Threat Logs ----
+Threat: Proxy Web Exploit
+CRITICAL: Ransomware activity suspected via
+ALERT: Failed login attempt detected from 192.168.1.34 on port
+-------------------
+Threat: SMB Ransomware Attack
+ALERT: Possible brute force attempt detected
+ALERT: Failed login attempt detected from 192.168.1.73 on port
+-------------------
+Threat: FTP Credential Sniffing
+WARNING: Multiple authentication failures for service
+WARNING: Multiple authentication failures for service
+-------------------
+Threat: SSH Brute Force Attack
+ALERT: Possible brute force attempt detected
+NOTICE: Suspicious traffic pattern detected targeting port 
+-------------------
+Threat: SMTP Phishing Campaign
+ALERT: Failed login attempt detected from 192.168.1.48 on port
+ALERT: Possible brute force attempt detected
+-------------------
+Threat: HTTP Web Exploit
+ALERT: Failed login attempt detected from 192.168.1.192 on port
+ALERT: Failed login attempt detected from 192.168.1.226 on port
+-------------------
+Threat: MySQL Data Theft
+ALERT: Failed login attempt detected from 192.168.1.92 on port
+CRITICAL: Ransomware activity suspected via
+-------------------
+Threat: HTTPS Web Exploit
+CRITICAL: Ransomware activity suspected via
+ALERT: Failed login attempt detected from 192.168.1.64 on port
+-------------------
+Threat: Telnet Credential Theft
+ALERT: Failed login attempt detected from 192.168.1.196 on port
+NOTICE: Suspicious traffic pattern detected targeting port 
+-------------------
+Threat: POP3 Credential Sniffing
+ALERT: Possible brute force attempt detected
+ALERT: Failed login attempt detected from 192.168.1.157 on port
+-------------------
+===================================
