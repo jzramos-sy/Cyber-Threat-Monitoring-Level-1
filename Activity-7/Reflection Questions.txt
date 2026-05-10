@@ -1,0 +1,14 @@
+1. What type of attack did you find most difficult? Why?
+The SQL Injection (SQLi) attack was the most complex to analyze. Unlike network attacks that can be stopped by a standard firewall.
+
+2. Which mitigation strategy did you use most often?
+Multi-Factor Authentication (MFA).
+
+3. How did the logs panel help you understand the attack?
+The Live Logs panel provided the technical context to identify the specific threat.
+
+4. Why is quick decision-making important in cybersecurity?
+Every second of delay increases the attack.
+
+5. What will you improve next time?
+I will improve my monitoring skills.
