@@ -1,0 +1,18 @@
+[2026-05-12 08:07:20] Hostname changed to JoshuaRamos
+[2026-05-12 08:07:27] IP address set to 192.168.100.1
+[2026-05-12 08:12:00] Attack succeeded: Penetration attempt
+[2026-05-12 08:12:05] Attack succeeded: Port scan detected
+[2026-05-12 08:12:10] Attack succeeded: Brute force login attempt
+[2026-05-12 08:12:12] Attack succeeded: Malware upload attempt on FTP
+[2026-05-12 08:12:16] Attack succeeded: DDoS on HTTP service
+[2026-05-12 08:12:36] ssh service stopped
+[2026-05-12 08:12:42] http service stopped
+[2026-05-12 08:12:46] ftp service stopped
+[2026-05-12 08:14:32] Firewall active
+[2026-05-12 08:16:10] ssh service stopped
+[2026-05-12 08:16:18] http service stopped
+[2026-05-12 08:16:21] ftp service stopped
+[2026-05-12 08:16:24] Firewall active
+[2026-05-12 08:16:31] http service started
+[2026-05-12 08:16:35] Quiz mode completed with score: 35
+
