@@ -1,0 +1,70 @@
+[PART 1: Identify Network Information]
+Task 1.1: Check IP Address
+
+What is your IP address? 192.168.32.132
+
+What is the name of your network interface? eth0
+
+Task 1.2: Check Gateway
+
+What is your default gateway? 192.168.32.2
+
+[PART 2: Test Network Connectivity]
+Task 2.1: Ping a Website
+
+Did the request succeed? (Yes/No): Yes (0% packet loss)
+
+What is the average time?: 29.670 ms
+
+[PART 3: DNS and Network Path]
+Task 3.1: Convert Domain to IP
+
+What IP address is returned?: 172.217.26.78 (IPv4) at 2404:6800:4017:803::200e (IPv6)
+
+Task 3.2: Trace Route
+
+How many hops does it take to reach Google?: It reached the 30 hops max limit. (Hop 1 was successful to the gateway 192.168.32.2, but Hops 2-30 timed out * * *, likely due to NAT/Firewall blocking ICMP traceroute packets).
+
+[PART 4: Check Open Ports]
+Task 4: View Active Ports
+
+List at least 2 open ports: Port 22 and Port 7070 (or 50001/32850)
+
+What service is running on those ports?: * Port 22 is running sshd (SSH)
+
+Port 7070 is running anydesk
+
+[PART 5: Network Scanning]
+Task 5: Scan a Target
+
+What ports are open?: Port 80/tcp
+
+What services are detected?: http
+
+[PART 6: Packet Capture]
+Task 6.1: List Interfaces
+
+What interface will you use?: eth0
+
+Task 6.2: Capture Traffic
+
+What kind of traffic did you see?: TCP traffic, specifically SSH protocol packets (Flags [P.] and [.]).
+
+Did you observe any IP addresses?: Yes, communication between 192.168.32.1 and the local machine 192.168.32.132.
+
+[BONUS CHALLENGE]
+Try: nmap -sV scanme.nmap.org
+
+What additional information did you get?: Instead of standard service names, the scan detected ports 22 and 80 as tcpwrapped. This means a full TCP handshake was completed, but the target closed the connection before the Nmap version scanner could grab the specific banner/version details.
+
+[PART 7: Focus Questions]
+Answer briefly:
+
+1. Why do some commands require sudo?
+Commands like tcpdump require sudo because they need root privileges to put the network card into promiscuous mode and capture raw packets directly from the hardware interface.
+
+2. What is the importance of nmap in cybersecurity?
+It allows to discover active hosts on a network, identify open ports, and determine what services are running.
+
+3. How can tcpdump help in monitoring attacks?
+It captures real-time packet data traversing the network.
