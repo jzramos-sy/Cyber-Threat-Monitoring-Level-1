@@ -1,0 +1,20 @@
+Logs:
+Hostname: JoshuaRamos
+IP Address: 10.10.10.20
+
+User Activity Logs:
+ip a
+hostname -I
+ping 8.8.8.8
+traceroute 8.8.8.8
+nslookup www.sinrevilo.moc
+dig www.sinrevilo.moc
+nmap www.sinrevilo.moc
+nmap -sV www.sinrevilo.moc
+nmap -A www.sinrevilo.moc
+tcpdump -i Ethernet
+arp-scan --localnet
+sudo arp-scan --localnet
+ls
+cat activity_10_log.txt
+wget activity_10_log.txt
