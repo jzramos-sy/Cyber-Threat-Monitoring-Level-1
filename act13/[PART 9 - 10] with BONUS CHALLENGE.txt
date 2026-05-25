@@ -1,0 +1,61 @@
+[PART 9]
+Which IP has the highest number of failed attempts?
+
+Answer: 203.0.113.50 with 4 failed attempts.
+
+How many total failed login attempts are there?
+
+Answer: 10 failed attempts (based on the initial log investigation).
+
+Which IP successfully logged in?
+
+Answer: 203.0.113.50 (successfully logged in as root). 
+Did the attacker succeed after multiple failures? (Yes/No + Evidence)
+
+Answer: Yes. Evidence: The log shows 4 consecutive "Failed password" attempts for the root user from IP 203.0.113.50 between 09:02:10 and 09:02:25. At 09:03:00, there is an "Accepted password" log for root from the exact same IP.
+
+Which IP is the most suspicious and why?
+
+Answer: 203.0.113.50 is the most suspicious. It brute-force behavior by spamming failed logins in a short timeframe and eventually managed to breach the server.
+
+
+-----------------------------------------------------
+[PART 10]
+INCIDENT REPORT: SSH Brute Force Attack
+
+Suspicious IP Address: 203.0.113.50
+
+Number of Attempts: 4 failed attempts, 1 successful attempt.
+
+Evidence (Commands Used):
+
+Found total failures: grep "Failed password" auth.log | wc -l
+
+Sorted highest attacker: grep "Failed password" auth.log | awk '{print $11}' | sort | uniq -c | sort -nr
+
+Checked for successful breach: grep "Accepted password" auth.log
+
+Conclusion (Was system compromised?): YES, the system was compromised. The attacker at IP 203.0.113.50 successfully bypassed the authentication after multiple failed attempts and gained root access at 09:03:00. 
+
+-----------------------------------------------------------
+[BONUS CHALLENGE]
+1. Attackers targeting root user:
+
+Command Used: grep "Failed password for root" auth.log
+
+Finding: The logs confirm that the brute-force attempts were highly targeted at the root account. The attempts originated from multiple external IPs: 192.168.1.10, 10.0.0.5, 203.0.113.50, and the injected live attacker 45.33.32.1.
+
+2. Attack time pattern:
+
+Command Used: grep "Failed password" auth.log | cut -d ' ' -f 3
+
+Finding: The attack pattern shows rapid, consecutive login attempts (occurring every 5 seconds). 
+
+3. Top 3 Attackers List:
+
+Command Used: grep "Failed password" auth.log | awk '{print $11}' | sort | uniq -c | sort -nr | head -n 3
+
+Finding: 
+1. 203.0.113.50 (4 failed attempts) 
+2. 192.168.1.10 (3 failed attempts)
+3. 10.0.0.5 (3 failed attempts)
